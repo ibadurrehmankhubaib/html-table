@@ -1,0 +1,95 @@
+ body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 40px;
+      background-color: #f4f6f9;
+    }
+
+    .table-container {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+
+    .table-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #007bff;
+      color: white;
+      padding: 20px;
+    }
+
+    .table-header h2 {
+      margin: 0;
+    }
+
+    .table-header button {
+      margin-left: 10px;
+      padding: 8px 16px;
+      background: white;
+      color: #007bff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .table-header button:hover {
+      background: #f5f4d4;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      animation: fadeIn 1s ease-in;
+    }
+
+    thead {
+      background: #f9f9f9;
+    }
+    tbody,tr,td::after{
+      left: 10px;
+      padding: 15px;
+    }
+    th, td {
+      padding: 15px;
+      text-align: left;
+    }
+
+    tbody tr {
+      transition: background-color 0.3s;
+      padding-top: 5px;
+      padding-bottom: 15px;
+    }
+
+    tbody tr:hover {
+      background-color: rgba(7, 204, 194, 0.541);
+    }
+
+    .status-dot {
+      height: 10px;
+      width: 10px;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 8px;
+    }
+
+    .active { background-color: green; }
+    .suspended { background-color: red; }
+    .inactive { background-color: orange; }
+
+    .action-icons i {
+      margin-right: 10px;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    .action-icons i:hover {
+      color: #007bff;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }

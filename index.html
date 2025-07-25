@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <title>User Management</title>
+  <style>
+   body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 40px;
+      background-color: #f4f6f9;
+    }
+
+    .table-container {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+
+    .table-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #007bff;
+      color: white;
+      padding: 20px;
+    }
+  
+    .table-header h2 {
+      margin: 0;
+    }
+     .table-header h2:hover{
+      transition: all 1s ease;
+     }
+    .table-header button {
+      margin-left: 10px;
+      padding: 8px 16px;
+      background: white;
+      color: #007bff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .table-header button:hover {
+      background: #f89109;
+    }
+
+
+    .user-management {
+      width: 90%;
+      margin: 20px auto;
+      border-collapse: collapse;
+      animation: fadeIn 1s ease-in;
+    }
+     @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+    }
+    .user-management th, .user-management td {
+      padding: 10px 12px;
+      border: 1px solid #ddd;
+      text-align: left;
+      vertical-align: middle;
+    }
+
+    .user-management th {
+      background-color: #00ff95d5;
+    }
+    .user-management th, .user-management td:hover{
+      transition: all 1s ease-in;
+    }
+    .user-img {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+
+    .name-cell {
+      display: flex;
+      align-items: center;
+    }
+
+    .status-dot {
+      height: 10px;
+      width: 10px;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 6px;
+    }
+
+    .active { background-color: green; }
+    .inactive { background-color: orange; }
+    .suspended { background-color: red; }
+
+  .action-icons i {
+      margin-right: 10px;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    .action-icons i:hover {
+      color: #007bff;
+    }
+  tbody tr {
+      transition: background-color 0.3s;
+      padding-top: 5px;
+      padding-bottom: 15px;
+    }
+
+    tbody tr:hover {
+      background-color: rgba(7, 204, 194, 0.541);
+    }
+  </style>
+</head>
+<body>
+<div class="table-container">
+  <div class="table-header">
+    <h2>User Management</h2>
+    <div>
+      <button> Export to Excel</button>
+      <button>Add New User</button>
+    </div>
+  </div>
+
+<table class="user-management">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>Date Created</th>
+      <th>Role</th>
+      <th>Status</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td class="name-cell"><img src="img/images.webp" alt="Michael" class="user-img"> Bala hatun</td>
+      <td>04/10/2013</td>
+      <td>Admin</td>
+      <td><span class="status-dot active"></span>Active</td>
+        <td class="action-icons">
+          <i class="fas fa-cog"></i>
+          <i class="fas fa-times"></i>
+        </td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td class="name-cell"><img src="img/images (1).webp" alt="Paula" class="user-img"> Mulhun hatun</td>
+      <td>05/08/2014</td>
+      <td>Publisher</td>
+      <td><span class="status-dot active"></span>Active</td>
+        <td class="action-icons">
+          <i class="fas fa-cog"></i>
+          <i class="fas fa-times"></i>
+        </td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td class="name-cell"><img src="img/img.jpg" alt="Antonio" class="user-img"> Orhan</td>
+      <td>11/05/2015</td>
+      <td>Publisher</td>
+      <td><span class="status-dot suspended"></span>Suspended</td>
+        <td class="action-icons">
+          <i class="fas fa-cog"></i>
+          <i class="fas fa-times"></i>
+        </td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td class="name-cell"><img src="img/images.jpg" alt="Mary" class="user-img"> Alauddin</td>
+      <td>06/09/2016</td>
+      <td>Reviewer</td>
+      <td><span class="status-dot active"></span>Active</td>
+        <td class="action-icons">
+          <i class="fas fa-cog"></i>
+          <i class="fas fa-times"></i>
+        </td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td class="name-cell"><img src="img/images (2).webp" alt="Martin" class="user-img"> Osman</td>
+      <td>12/08/2017</td>
+      <td>Moderator</td>
+      <td><span class="status-dot inactive"></span>Inactive</td>
+        <td class="action-icons">
+          <i class="fas fa-cog"></i>
+          <i class="fas fa-times"></i>
+        </td>
+    </tr>
+  </tbody>
+</table>
+
+</body>
+</html>
